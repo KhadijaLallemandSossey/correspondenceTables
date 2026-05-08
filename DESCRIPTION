@@ -27,7 +27,6 @@ NeedsCompilation: no
 URL: https://github.com/eurostat/correspondenceTables
 BugReports: https://github.com/eurostat/correspondenceTables/issues
 Maintainer: Mátyás Mészáros <matyas.meszaros@ec.europa.eu>
-RoxygenNote: 7.3.3
 Packaged: 2025-09-14 21:32:35 UTC; thoma
 Author: Vasilis Chasiotis [aut] (Department of Statistics, Athens University of
     Economics and Business),
@@ -42,3 +41,4 @@ Author: Vasilis Chasiotis [aut] (Department of Statistics, Athens University of
   Mauro Baldacchini [aut],
   Khadija Sossey-Lallemand [aut],
   Mark van der Loo [aut]
+Config/roxygen2/version: 8.0.0
