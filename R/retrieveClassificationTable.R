@@ -84,6 +84,9 @@ retrieveClassificationTable <- function(endpoint,
                                         showQuery = FALSE,
                                         knownSchemes = NULL,
                                         preferMappingOnly = FALSE) {
+  
+  # test change
+  message("TEST: retrieveClassificationTable() is running")
   # --- Endpoint validation & URL resolution (using internal helpers) ----------
   endpoint <- .validate_endpoints(endpoint)   # normalizes and validates
   if (identical(endpoint, "ALL")) {
