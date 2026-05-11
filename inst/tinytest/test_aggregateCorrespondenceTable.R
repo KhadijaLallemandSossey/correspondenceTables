@@ -134,4 +134,10 @@
   expect_equal(out$value[out$code_B == "B1"], 0)
   expect_equal(out$value[out$code_B == "B2"], 50)
 }
-
+# --- New test: AB must not be NULL ------------------
+{
+  expect_error(
+    aggregateCorrespondenceTable(NULL, NULL, NULL),
+    "must not be NULL"
+  )
+}

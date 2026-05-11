@@ -70,9 +70,16 @@
 #'
 #' @seealso \code{\link{retrieveCorrespondenceTable}} for downloading AB tables.
 #'
-#' @export
+#' @export 
 
 aggregateCorrespondenceTable <- function(AB, A, B = NULL) {
+  
+  # ADD HERE (top of function)
+  if (is.null(AB)) {
+    stop("Input AB must not be NULL", call. = FALSE)
+  }
+  
+  
   # --- helpers ------------------------------------------
   stop_if <- function(cond, msg) if (isTRUE(cond)) stop(msg, call. = FALSE)
   
