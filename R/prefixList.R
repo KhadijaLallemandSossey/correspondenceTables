@@ -109,6 +109,18 @@ prefix_declared_in_block <- function(token, prefix_block) {
 #' @export
 
 prefixList <- function(endpoint, prefix = NULL) {
+    
+    # ✅ Normalize endpoint ONLY (safe)
+    if (is.character(endpoint)) {
+      endpoint <- toupper(trimws(endpoint))
+    }
+    
+    # ✅ Message (safe, non-breaking)
+    if (getOption("correspondenceTables.verbose", TRUE)) {
+      message("Retrieving prefix list for endpoint: ", endpoint)
+    }
+    
+    
   # --- helpers (non-exported) ---
   .norm_name <- function(x) toupper(trimws(as.character(x)))
   .core_prefixes <- function() {
@@ -204,3 +216,5 @@ prefixList <- function(endpoint, prefix = NULL) {
   # Drop duplicates while preserving order
   out[!duplicated(out)]
 }
+
+
